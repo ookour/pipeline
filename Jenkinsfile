@@ -12,7 +12,7 @@ stages {
      }
      stage('validating') {
          steps {
-             ls -la
+            sh "ls -la"
     }
 }
 }
