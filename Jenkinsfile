@@ -10,10 +10,8 @@ stages {
              
          }
      }
-     stage('validating') {
-         steps {
-            echo "Hello"
-    }
-}
+    
+    
+    
 }
 }
