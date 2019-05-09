@@ -5,6 +5,16 @@ pipeline {
             steps {
                 sh "ls"
             }
-        }
+     }
+    
+      stage('Copy Archive') {
+         steps {
+             script {
+                 step ([$class: 'CopyArtifact',
+                 projectName: 'testetes']);
+             }
+         }
+     }
+    
     }
 }
