@@ -5,9 +5,15 @@ stages {
          steps {
              script {
                  step ([$class: 'CopyArtifact',
-                 projectName: 'testetes']);
+                 projectName: 'Create_archive']);
              }
+             
          }
      }
+     stage('validating') {
+         steps {
+             sh 'ls' 
+    }
+}
 }
 }
