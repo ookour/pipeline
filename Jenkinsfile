@@ -17,7 +17,6 @@ pipeline {
       stage('Build') {
          steps {
              script {
-                 #!/bin/bash
                  ImageName=$(ls  | grep docker  |cut -d"." -f1)"
                  docker image build -t $ImageName
              }
