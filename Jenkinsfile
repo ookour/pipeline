@@ -5,7 +5,7 @@ stages {
          steps {
              script {
                  step ([$class: 'CopyArtifact',
-                 projectName: 'Create_archive']);
+                 projectName: 'testetes']);
              }
          }
      }
