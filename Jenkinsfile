@@ -12,7 +12,7 @@ stages {
      }
      stage('validating') {
          steps {
-            echo "ls -la"
+            echo "Hello"
     }
 }
 }
