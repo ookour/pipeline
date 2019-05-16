@@ -19,7 +19,7 @@ pipeline {
       stage('Build') {
          steps {
              script {
-                 sh "echo $ImageName "
+                 echo "$ImageName"
                  sh "echo image going to be built"
              }
          }
