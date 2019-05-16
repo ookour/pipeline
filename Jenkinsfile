@@ -5,7 +5,7 @@ pipeline {
          steps {
              script {
                  step ([$class: 'CopyArtifact',
-                 projectName: 'listener',
+                 projectName: 'listener'
                  //selector: [$class: 'SpecificBuildSelector', buildNumber: '$BuildNumber']
                  ]);
              }
