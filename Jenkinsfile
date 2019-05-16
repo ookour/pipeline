@@ -19,7 +19,7 @@ pipeline {
       stage('Build') {
          steps {
              script {
-                 echo "$BuildNumber"
+                 echo "build number is $BuildNumber"
                  sh "echo image going to be built"
              }
          }
