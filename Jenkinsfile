@@ -5,8 +5,8 @@ pipeline {
          steps {
              script {
                  step ([$class: 'CopyArtifact',
-                 projectName: 'ProjectX',
-                 selector: [$class: 'SpecificBuildSelector', buildNumber: '1']
+                 projectName: 'listener',
+                 selector: [$class: 'SpecificBuildSelector', buildNumber: '$BuildNumber']
                  ]);
              }
          }
@@ -19,8 +19,8 @@ pipeline {
       stage('Build') {
          steps {
              script {
-                 ImageName=$(ls  | grep docker  |cut -d"." -f1)"
-                 docker image build -t $ImageName
+                 sh "echo $ImageName "
+                 sh "echo image going to be built"
              }
          }
       }
