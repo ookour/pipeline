@@ -30,9 +30,6 @@ pipeline {
                  echo "the Image Tag is ${ImageTag}"
                  echo "the workspace is ${WORKSPACE}"
                  sh "mv ms-* ${WORKSPACE}/packages/AV1"
-                 //fileOperations([folderCopyOperation(
-                  // sourceFolderPath: "ms-*",
-                   //destinationFolderPath: "packages/AV1")])
              }
          }
       }
