@@ -23,7 +23,7 @@ pipeline {
                  Dockerfile = sh(returnStdout: true, script: 'ls  | grep docker_')
                  //def Dockerfile = sh "(ls  | grep docker)"
                  //def Dockerfile = sh " ls  | grep docker_"
-                 echo ${Dockerfile}
+                 echo "${Dockerfile}"
                  //sh 'MSImageName=$(ls  | grep docker  |cut -d"_" -f2)'
                  //echo "MSImageName" $MSImageName
                  //sh 'ImageName=$(echo $MSImageName | cut -d"@" -f1)'
