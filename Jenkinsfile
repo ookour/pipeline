@@ -31,8 +31,8 @@ pipeline {
                  echo "the workspace is ${WORKSPACE}"
                  //sh "mv ${ImageName} ${WORKSPACE}/packages/AV1"
                  fileOperations([folderCopyOperation(
-                    sourceFolderPath: "${WORKSPACE}/${ImageName}",
-                    destinationFolderPath: "${WORKSPACE}/packages/AV1")])
+                    sourceFolderPath: "${ImageName}",
+                    destinationFolderPath: "packages/AV1")])
              }
          }
       }
