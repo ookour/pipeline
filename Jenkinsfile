@@ -29,11 +29,14 @@ pipeline {
                  echo "the Image Name is ${ImageName}"
                  echo "the Image Tag is ${ImageTag}"
                  echo "the workspace is ${WORKSPACE}"
-                 sh "mv ${ImageName} ${WORKSPACE}/packages/AV1"
+                 //sh "mv ${ImageName} ${WORKSPACE}/packages/AV1"
+                 fileOperations([folderCopyOperation(
+                    sourceFolderPath: "${WORKSPACE}/${ImageName}",
+                    destinationFolderPath: "${WORKSPACE}/packages/AV1"
+                    )]).
              }
          }
       }
-    
     stage('Build') {
          steps {
              script {
