@@ -31,7 +31,7 @@ pipeline {
                  echo "the workspace is ${WORKSPACE}"
                  //sh "mv ${ImageName} ${WORKSPACE}/packages/AV1"
                  fileOperations([folderCopyOperation(
-                   sourceFolderPath: "${ImageName}",
+                   sourceFolderPath: "ms-security",
                    destinationFolderPath: "packages/AV1")])
              }
          }
