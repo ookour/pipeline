@@ -33,7 +33,7 @@ pipeline {
                  fileOperations([folderCreateOperation(
                    folderPath: "packages/AV1/${ImageName}")])
                  fileOperations([folderCopyOperation(
-                   sourceFolderPath: "${ImageName}")]),
+                   sourceFolderPath: "${ImageName}",
                    destinationFolderPath: "packages/AV1/${ImageName}")])
              }
          }
