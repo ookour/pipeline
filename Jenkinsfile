@@ -28,7 +28,7 @@ pipeline {
                  echo "the MSImageName is ${MSImageName}"
                  echo "the Image Name is ${ImageName}"
                  echo "the Image Tag is ${ImageTag}"
-                 eco "the workspace is ${WORKSPACE}"
+                 echo "the workspace is ${WORKSPACE}"
                  //sh "mv ${ImageName} ${WORKSPACE}/packages/AV1"
              }
          }
