@@ -30,11 +30,9 @@ pipeline {
                  echo "the Image Tag is ${ImageTag}"
                  echo "the workspace is ${WORKSPACE}"
                  //sh "mv ${ImageName} ${WORKSPACE}/packages/AV1"
-                 fileOperations([folderCreateOperation(
-                   folderPath: "packages/AV1/${ImageName}")])
                  fileOperations([folderCopyOperation(
                    sourceFolderPath: "${ImageName}",
-                   destinationFolderPath: "packages/AV1/${ImageName}")])
+                   destinationFolderPath: "packages/AV1")])
              }
          }
       }
