@@ -20,7 +20,7 @@ pipeline {
          steps {
              script {
                  echo "build number is $BuildNumber"
-                 sh   "Dockerfile=$(ls  | grep docker)"
+                 def Dockerfile = sh "ls  | grep docker"
                  sh 'MSImageName=$(ls  | grep docker  |cut -d"_" -f2)'
                  echo "MSImageName" $MSImageName
                  sh 'ImageName=$(echo $MSImageName | cut -d"@" -f1)'
