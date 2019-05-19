@@ -31,7 +31,7 @@ pipeline {
                  echo "the workspace is ${WORKSPACE}"
                  //sh "mv ${ImageName} ${WORKSPACE}/packages/AV1"
                  fileOperations([folderCreateOperation(
-                   folderPath: "database/${ImageName}")])
+                   folderPath: "packages/AV1/${ImageName}")])
                    //sourceFolderPath: "database/${ImageName}")])
                    //destinationFolderPath: "database")])
              }
