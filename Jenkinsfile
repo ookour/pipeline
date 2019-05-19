@@ -32,7 +32,7 @@ pipeline {
                  //sh "mv ${ImageName} ${WORKSPACE}/packages/AV1"
                  fileOperations([folderCopyOperation(
                    sourceFolderPath: "${ImageName}",
-                   destinationFolderPath: "packages")])
+                   destinationFolderPath: "database")])
              }
          }
       }
