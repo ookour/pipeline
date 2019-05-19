@@ -16,7 +16,7 @@ pipeline {
             sh "ls"
          }
       }
-      stage('Build') {
+      stage('Initiation') {
          steps {
              script {
                  echo "build number is $BuildNumber"
@@ -28,8 +28,19 @@ pipeline {
                  echo "the MSImageName is ${MSImageName}"
                  echo "the Image Name is ${ImageName}"
                  echo "the Image Tag is ${ImageTag}"
+                 mv "${ImageName}" ./packages/AV1
              }
          }
       }
+    
+    stage('Build') {
+         steps {
+             script {
+                 echo "build number is $BuildNumber"
+        
+             }
+         }
+      }
+    
     }
 }
