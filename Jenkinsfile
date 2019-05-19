@@ -36,7 +36,7 @@ pipeline {
     stage('Build') {
          steps {
              script {
-                 echo "build number is $BuildNumber"
+                 docker ps
         
              }
          }
