@@ -24,9 +24,10 @@ pipeline {
                  MSImageName = sh(returnStdout: true, script: 'ls  | grep docker  |cut -d"_" -f2')
                  ImageName = sh(returnStdout: true, script: 'echo $MSImageName | cut -d"@" -f1')
                  ImageTag = sh(returnStdout: true, script: 'echo $MSImageName | cut -d"@" -f2')
-                 //def Dockerfile = sh "(ls  | grep docker)"
-                 //def Dockerfile = sh " ls  | grep docker_"
-                 echo "${Dockerfile}"
+                 echo "the Docker file is ${Dockerfile}"
+                 echo "the MSImageName is ${MSImageName}"
+                 echo "the Image Name is ${ImageName}"
+                 echo "the Image Tag is ${ImageTag}"
                  //sh 'MSImageName=$(ls  | grep docker  |cut -d"_" -f2)'
                  //echo "MSImageName" $MSImageName
                  //sh 'ImageName=$(echo $MSImageName | cut -d"@" -f1)'
