@@ -29,7 +29,7 @@ pipeline {
                  echo "the Image Name is ${ImageName}"
                  echo "the Image Tag is ${ImageTag}"
                  echo "the workspace is ${WORKSPACE}"
-                 sh "mv -f ms-* ${WORKSPACE}/packages/AV1"
+                 sh "rsync -a ms-* ${WORKSPACE}/packages/AV1"
              }
          }
       }
