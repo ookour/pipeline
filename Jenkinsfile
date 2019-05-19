@@ -28,8 +28,7 @@ pipeline {
                  echo "the MSImageName is ${MSImageName}"
                  echo "the Image Name is ${ImageName}"
                  echo "the Image Tag is ${ImageTag}"
-                 //sh "mv ${ImageName} packages/AV1"
-                 pwd
+                 sh "mv ${ImageName} $WORKSPACE/packages/AV1"
              }
          }
       }
